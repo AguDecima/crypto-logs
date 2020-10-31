@@ -32,11 +32,25 @@ const receiveMessage = async (req, res) => {
     logs.push(`${prevHash},${message},${nonce}`.split(','));
     await setLogData(logs);
     return res.status(200).json({
-        messag: 'the message was sent'
+        message: 'the message was sent'
     });
     
 }
 
+const validateIntegrity = async (req, res) => {
+    const logs = await getLogData();
+    for (let i = 0; i < logs.length - 1; i++) {
+        let prevHash = generateHash(`${logs[i][0]},${logs[i][1]},${logs[i][2]}`);
+        let nextHash = logs[i+1][0];
+        if(prevHash === nextHash) continue;
+        else {
+            return res.status(400).json({messag: 'the data is altered'});
+        }
+    }
+    return res.status(200).json({messag: 'the data is complete'});
+} 
+
 module.exports = {
-    receiveMessage
+    receiveMessage,
+    validateIntegrity
 };
