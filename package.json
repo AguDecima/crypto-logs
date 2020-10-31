@@ -18,7 +18,8 @@
     "crypto-js": "^4.0.0",
     "csv-parse": "^4.12.0",
     "csv-stringify": "^5.5.1",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "joi": "^17.3.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.6"
