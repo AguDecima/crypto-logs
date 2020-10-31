@@ -1,0 +1,26 @@
+{
+  "name": "crypto-logs",
+  "version": "1.0.0",
+  "description": ": Linked line common log service",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Agustin Decima",
+  "license": "MIT",
+  "dependencies": {
+    "app-root-path": "^3.0.0",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.0.0",
+    "csv-parse": "^4.12.0",
+    "csv-stringify": "^5.5.1",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
