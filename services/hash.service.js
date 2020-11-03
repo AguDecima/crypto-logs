@@ -36,7 +36,7 @@ const computeHashProofWork = (prevHash,message) => {
 
 const getLogData = async () => {
     try {
-        const fileContent = await fs.readFile(__dirname+'/crypto-logs.csv');
+        const fileContent = await fs.readFile(__dirname+'/../logs/crypto-logs.csv');
         let records = await parse(fileContent, { columns: false });
         return records;
     } catch (error) {
@@ -50,7 +50,7 @@ const setLogData = async (newData) => {
         header: false
       }, async function (err, output) {
         if (err) throw err;
-        await fs.writeFile(__dirname+'/crypto-logs.csv', output);
+        await fs.writeFile(__dirname+'/../logs/crypto-logs.csv', output);
       });
 }
 
