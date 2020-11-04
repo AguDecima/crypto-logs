@@ -1,7 +1,7 @@
 {
   "name": "crypto-logs",
   "version": "1.0.0",
-  "description": ": Linked line common log service",
+  "description": "Linked line common log service",
   "main": "index.js",
   "scripts": {
     "start": "nodemon node app.js",
