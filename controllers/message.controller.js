@@ -13,8 +13,7 @@ const receiveMessage = async (req, res) => {
         schemaValidation('receiveMessage', payload, messsageSchema);
     } catch (error) {
         return res.status(400).json({
-            message: 'invalid body',
-            code: 'bad_request'
+            message: 'invalid body'
         });
         return;
     }

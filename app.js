@@ -15,3 +15,5 @@ app.use('/api/v1', messageRoute);
 app.listen(process.env.PORT || '3000', () => {
     logger.info(`running on http://localhost${process.env.PORT || 3000}`);
 });
+
+module.exports = app;
